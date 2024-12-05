@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="30dp">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="#AAAAAA"
+        >
+
+        <TextView
+            android:id="@+id/naming"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="40dp"
+            android:layout_weight="6"
+            android:text="Название" />
+
+        <Button
+            android:id="@+id/settings_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:background="#00000000"
+            android:text="⚙"
+            android:textSize="55dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AAAAAA"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Прогресс сегодня"
+            android:textSize="30dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="Сахар"
+                        android:textSize="30dp" />
+
+                    <ProgressBar
+                        android:id="@+id/p1_progress_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="350dp"
+                        android:layout_height="350dp"
+                        android:progress="15"
+                        android:progressDrawable="@drawable/custom_progress" />
+                    <TextView
+                        android:id="@+id/p1_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="aaa"
+                        android:textSize="30dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="Белки"
+                        android:textSize="30dp" />
+
+                    <ProgressBar
+                        android:id="@+id/p2_progress_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="350dp"
+                        android:layout_height="350dp"
+                        android:progress="15"
+                        android:progressDrawable="@drawable/custom_progress" />
+                    <TextView
+                        android:id="@+id/p2_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="aaa"
+                        android:textSize="30dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="Жиры"
+                        android:textSize="30dp" />
+
+                    <ProgressBar
+                        android:id="@+id/p3_progress_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="350dp"
+                        android:layout_height="350dp"
+                        android:progress="15"
+                        android:progressDrawable="@drawable/custom_progress" />
+                    <TextView
+                        android:id="@+id/p3_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="aaa"
+                        android:textSize="30dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="Углеводы"
+                        android:textSize="30dp" />
+
+                    <ProgressBar
+                        android:id="@+id/p4_progress_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="350dp"
+                        android:layout_height="350dp"
+                        android:progress="15"
+                        android:progressDrawable="@drawable/custom_progress" />
+                    <TextView
+                        android:id="@+id/p4_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="aaa"
+                        android:textSize="30dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleOfTodaysFood"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/add_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Добавить еду"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/qr_scan_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Отсканировать"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>

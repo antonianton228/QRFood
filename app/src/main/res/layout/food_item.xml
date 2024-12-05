@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="food"
+            type="com.example.qrfood.Food" />
+        <variable
+            name="id"
+            type="Integer" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+                 android:orientation="vertical"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        >
+
+
+        <LinearLayout
+            android:background="@color/purple_200"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:paddingHorizontal="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@{String.valueOf(id).toString()}"
+                android:gravity="center"
+
+                android:textSize="30dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="100000"
+                android:text="@{String.valueOf(food.name)}"
+                android:gravity="center"
+                android:textSize="30dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(food.p1).toString()}"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="3dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(food.p2).toString()}"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="3dp"
+
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(food.p3).toString()}"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="3dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(food.p4).toString()}"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="3dp"
+                    />
+            </LinearLayout>
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="🗑"
+                android:textSize="50dp"
+                android:background="#00000000"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
